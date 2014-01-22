@@ -61,11 +61,13 @@ module Database
       self[:id].nil?
     end    
 
+    # Reader!
     def [](attribute)
       raise_error_if_invalid_attribute!(attribute)
       @attributes[attribute]
     end
 
+    # Writer
     def []=(attribute, value)
       raise_error_if_invalid_attribute!(attribute)
 
